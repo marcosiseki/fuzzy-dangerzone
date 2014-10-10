@@ -1,3 +1,10 @@
+﻿# Update 1.3
+- [x] Contratos.
+
+# Update 1.2
+- [x] Atualizações de documentos.
+- [x] Adição do diagrama sequencial.
+
 # Update 1.1B
 - [x] Adição de correções.
 
