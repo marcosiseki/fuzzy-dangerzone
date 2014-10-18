@@ -1,4 +1,7 @@
-﻿# Update 1.3
+﻿# Update 1.4
+- [x] Diagramas de Comunicação.
+
+# Update 1.3
 
 - [x] Contratos.
 
