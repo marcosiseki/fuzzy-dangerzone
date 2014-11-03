@@ -1,4 +1,10 @@
-﻿# Update 1.4
+﻿# Update 1.6
+- [x] Script de criação de Banco de dados.
+
+# Update 1.5
+- [x] Mapeamento de Classes
+
+# Update 1.4
 - [x] Diagramas de Comunicação.
 
 # Update 1.3
