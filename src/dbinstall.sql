@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `Leitor` (
 ,	admin VARCHAR(11) NOT NULL
 ,	diasemprestimo INT NOT NULL
 ,		PRIMARY KEY(`cpf`)
-,		FOREIGN KEY(`cpf`) REFERENCES `Pessoa`(`cpf`) ON UPDATE CASCADE
+,		FOREIGN KEY(`cpf`) REFERENCES `Pessoa`(`cpf`) ON UPDATE CASCADE ON DELETE CASCADE
 ,		FOREIGN KEY(`admin`) REFERENCES `Administrador`(`cpf`) ON UPDATE CASCADE
 ) ENGINE = "InnoDB";
 |
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `Aluno` (
 	cpf VARCHAR(11) NOT NULL
 ,	conclusao DATE NOT NULL
 ,		PRIMARY KEY(`cpf`)
-,		FOREIGN KEY(`cpf`) REFERENCES `Leitor`(`cpf`) ON UPDATE CASCADE
+,		FOREIGN KEY(`cpf`) REFERENCES `Leitor`(`cpf`) ON UPDATE CASCADE ON DELETE CASCADE
 ) ENGINE = "InnoDB";
 |
 
@@ -228,7 +228,7 @@ CREATE PROCEDURE `addAluno`(
 BEGIN
 	INSERT INTO `Pessoa`(`cpf`, `nome`, `email`, `telefone`, `senha`) VALUES(cpf, nome, email, telefone, senha);
 	INSERT INTO `Leitor`(`cpf`, `admin`, `diasemprestimo`) VALUES(cpf, admin, 30);
-	INSERT INTO `Professor`(`cpf`, `conclusao`) VALUES(cpf, conclusao);
+	INSERT INTO `Aluno`(`cpf`, `conclusao`) VALUES(cpf, conclusao);
 END
 |
 
